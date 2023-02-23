@@ -1,2 +1,2 @@
 BankAccTest@gmail.com 
-Password123
+BankAccount
