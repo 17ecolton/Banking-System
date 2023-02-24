@@ -9,9 +9,8 @@ smtp_server = "smtp.gmail.com"  # Google SMTP Server
 email_from = "tedcolton177@gmail.com"
 pswd = "icmafrqbndfchnmd"
 
-AccountNo = 123456789012
 
-
+#tries to log the user in by scanning through the csv to find the matching email and password
 def login(email, password):
     with open('Details.csv', 'r', ) as file:
         reader = csv.reader(file, delimiter=',')
@@ -21,12 +20,13 @@ def login(email, password):
         file.close()
 
 
+#sends the user an email if they forgot their password
 def forgotPswd(Email):
     email_to = Email
     Ui = "resend"
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
                 "v", "w", "x", "y", "z"]
-    
+
     while Ui == "resend":
         code = ""
         for i in range(6): code = code + alphabet[int(random.randint(0, 25))]
@@ -38,7 +38,7 @@ def forgotPswd(Email):
             TIE_server.starttls(context=simple_email_context)
             TIE_server.login(email_from, pswd)
             TIE_server.sendmail(email_from, email_to, message)
-        
+
         except Exception as e:print(e)
         finally:TIE_server.quit()
 
@@ -47,6 +47,7 @@ def forgotPswd(Email):
         else:Ui = "resend"
 
 
+#makes an account for the user by writing to a csv
 def signup(Name, AccountNo, Email, Postcode, Password):
     with open('details.csv', 'a', newline='') as file:
         writer = csv.writer(file)
@@ -55,6 +56,7 @@ def signup(Name, AccountNo, Email, Postcode, Password):
         return True
 
 
+#signs the user in by using the other functions
 def Sign_In(Ui):
     if Ui == "yes":
         info = input("whats your email and password? or type forgot if you dont know your password: ")
@@ -85,3 +87,4 @@ def Sign_In(Ui):
 
 if Sign_In(input("do you have an account?: ")):print("Signed in")
 else:print("didnt work")
+
