@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Bank Account</h1>
+<h1>Loids Bank Account</h1>
 
 <form action="/action_page.php">
   <label for="Email">Email:</label>
