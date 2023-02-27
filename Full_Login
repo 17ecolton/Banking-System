@@ -6,8 +6,8 @@ import random
 smtp_port = 587  # Standard secure SMTP port
 smtp_server = "smtp.gmail.com"  # Google SMTP Server
 
-email_from = "tedcolton177@gmail.com"
-pswd = "icmafrqbndfchnmd"
+email_from = "BankingSystemTest123@gmail.com"
+pswd = "khfwiwmceczvkawg"
 
 
 #tries to log the user in by scanning through the csv to find the matching email and password
