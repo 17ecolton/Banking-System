@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<center><img src="umbrella.jpg" alt="Logo" width="450" height="128"></center>
+
+<body><center>
+	<font size="4" face="OCR A Std Regular">
+
+	<p1>Account</p1>
+
+		<form action="/action_page.php">
+			<p1>ballance for {name} is {ballance}</p1>
+			<button onclick="window.location.href='file:///U:/Desktop/account_Page.html';" type="button" >reload</button>
+		</form>
+	<font size="4" face="OCR A Std Regular">
+
+</center></body>
