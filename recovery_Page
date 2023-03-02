@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<center><img src="umbrella.jpg" alt="Logo" width="450" height="128"></center>
+
+<body><center>
+	<font size="4" face="OCR A Std Regular">
+
+	<p1>account recovery</p1>
+		<p1>please input the code send to {email}</p1>
+		<form action="/action_page.php">
+		  <label for="Email">code:</label>
+		  <input type="text" id="fname" name="fname"><br><br>
+		  <button onclick="window.location.href='file:///U:/Desktop/account_Page.html';" type="button" >submit</button>
+		</form>
+	<font size="4" face="OCR A Std Regular">
+
+</center></body>
