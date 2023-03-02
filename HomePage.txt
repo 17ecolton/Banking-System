@@ -1,16 +1,21 @@
+
 <!DOCTYPE html>
 <html>
+
+<center><img src="umbrella.jpg" alt="Logo" width="450" height="128"></center>
+
 <body>
+	<font size="4" face="OCR A Std Regular">
 
-<h1>Loids Bank Account</h1>
-
-<form action="/action_page.php">
-  <label for="Email">Email:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="Pswd">Password:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <button type="button">Submit</button> <button type="button" >Create Account</button> <button onclick="window.location.href='file:///U:/Desktop/stupid%20idea2.html';" type="button" >Forgot Password</button>
-</form>
+		<form action="/action_page.php" >
+			<label for="Email"><center>Email:</center></label>
+			<center><input type="text" id="fname" name="fname"><br><br></center>
+			<label for="Pswd"><center>Password:</center></label>
+			<center><input type="text" id="lname" name="lname"></center><br><br></center>
+			<center><button type="button">Submit</button> <button type="button" >Create Account</button> <button    onclick="window.location.href='file:///U:/Desktop/stupid%20idea2.html';" type="button" >Forgot Password</button></center>
+		</form>
+	
+	 </font>
 
 </body>
 </html>
