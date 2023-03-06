@@ -30,10 +30,8 @@ def HomePage():
                     return redirect(url_for("BallancePage", name = Email , bal = 1000))
                 else:
                     a = 1
-
-                    ####
-                    ### check to see if its the end of file if so return back to homepage 
-                    ####
+            return redirect(url_for("HomePage")
+                            
             file.close()
     else:
         return """<!DOCTYPE html>
