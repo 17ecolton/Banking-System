@@ -16,7 +16,7 @@ def HomePage():
     #     Email = request.form["Email"]
     #     Pswd = request.form["Pswd"]
     #     if Email == "123" and Pswd == "123":
-    #         return redirect(url_for("BallancePage", name = Email , bal = 1000))
+    #         return redirect(url_for("balancePage", name = Email , bal = 1000))
     #     else:
     #         print("False")
 
@@ -27,7 +27,7 @@ def HomePage():
             reader = csv.reader(file, delimiter=',')
             for row in reader:
                 if str(row[2]) == str(Email) and str(row[4]) == str(Pswd):
-                    return redirect(url_for("BallancePage", name = Email , bal = 1000))
+                    return redirect(url_for("balancePage", name = Email , bal = 1000))
                 else:
                     a = 1
             return redirect(url_for("HomePage")
@@ -57,7 +57,7 @@ def HomePage():
 
 
 @app.route("/<name>")
-def BallancePage(name, bal):
+def balancePage(name, bal):
     return f"""<!DOCTYPE html>
                 <html>
                 
@@ -69,7 +69,7 @@ def BallancePage(name, bal):
                     <p1>Account</p1>
                 
                         <form action="/action_page.php">
-                            <p1>ballance for {name} is {bal}</p1>
+                            <p1>balance for {name} is {bal}</p1>
                             <button onclick="window.location.href='file:///U:/Desktop/account_Page.html';" type="button" >reload</button>
                         </form>
                     <font size="4" face="OCR A Std Regular">
@@ -81,7 +81,7 @@ def Verification(email, code, methods = ["POST","GET"]):
     if request.method =="POST":
         UI_Code = request.form["code"]
         if UI_Code = code:
-            return redirect(url_for("BallancePage", name = Email , bal = 1000))
+            return redirect(url_for("balancePage", name = Email , bal = 1000))
 
         else:
             return redirect(url_for("HomePage"))
