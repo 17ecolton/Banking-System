@@ -30,6 +30,10 @@ def HomePage():
                     return redirect(url_for("BallancePage", name = Email , bal = 1000))
                 else:
                     a = 1
+
+                    ####
+                    ### check to see if its the end of file if so return back to homepage 
+                    ####
             file.close()
     else:
         return """<!DOCTYPE html>
@@ -82,9 +86,11 @@ def Verification(email, code, methods = ["POST","GET"]):
             return redirect(url_for("BallancePage", name = Email , bal = 1000))
 
         else:
+            return redirect(url_for("HomePage"))
+
         
     else:
-        return"""<!DOCTYPE html>
+        returnf"""<!DOCTYPE html>
             <html>
 
             <center><img src="umbrella.jpg" alt="Logo" width="450" height="128"></center>
@@ -103,6 +109,8 @@ def Verification(email, code, methods = ["POST","GET"]):
                     <font size="4" face="OCR A Std Regular">
 
             </center></body>"""
+
+
 
 @app.route("/ForgotPassword", methods = ["POST","GET"])
 def ForgotPassword():
